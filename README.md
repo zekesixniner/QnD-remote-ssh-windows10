@@ -5,8 +5,11 @@ Install OpenSSH-server as optional feature in win10
 Download<br> 
 https://www.nirsoft.net/utils/nircmd.zip @ https://www.nirsoft.net/utils/nircmd.html<br>
 https://stackoverflow.com/questions/42391319/run-command-as-system-user-in-powershell<br> 
-`nircmdc.exe elevatecmd runassystem c:\windows\System32\cmd.exe`<br> 
-create keys (priv&pub) with `ssh-keygen` and upload pub key to <br>
+`nircmdc.exe elevatecmd runassystem c:\windows\System32\cmd.exe`<br>
+or<br>
+`psexec -i -s cmd.exe` with https://learn.microsoft.com/en-us/sysinternals/downloads/pstools<br>
+
+Create keys (priv&pub) with `ssh-keygen` and upload pub key to <br>
 `user@remote.host.on.internet`<br>
 and open corresponding port towards this server.
 
